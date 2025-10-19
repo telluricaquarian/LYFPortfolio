@@ -1,13 +1,18 @@
-export const metadata = { title: "Llewellyn Y. Fisher" };
+// app/layout.tsx
+import type { ReactNode } from "react";
+import "./globals.css";
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+export const metadata = {
+  title: "Llewellyn Y. Fisher",
+};
+
+export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      {/* Tailwind v4 prefers direct class usage */}
+      <body className="bg-black text-white antialiased">
+        {children}
+      </body>
     </html>
   );
 }
