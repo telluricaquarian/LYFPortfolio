@@ -1,0 +1,16 @@
+/* app/globals.css */
+@import "tailwindcss";
+
+:root {
+  color-scheme: dark;
+}
+
+/* Base element defaults */
+@layer base {
+  html, body { height: 100%; }
+  body { @apply bg-black text-white antialiased; }
+}
+
+/* Add any custom component/utility layers below if needed */
+/* @layer components { } */
+/* @layer utilities  { } */
